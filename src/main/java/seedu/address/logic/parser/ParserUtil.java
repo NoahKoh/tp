@@ -35,10 +35,15 @@ public class ParserUtil {
      */
     public static Index parseIndex(String oneBasedIndex) throws ParseException {
         String trimmedIndex = oneBasedIndex.trim();
-        if (!StringUtil.isNonZeroUnsignedInteger(trimmedIndex)) {
+        try {
+            int index = Integer.parseInt(trimmedIndex);
+            if (index <= 0 || index > Integer.MAX_VALUE) {
+                throw new ParseException(MESSAGE_INVALID_INDEX);
+            }
+            return Index.fromOneBased(index);
+        } catch (NumberFormatException e) {
             throw new ParseException(MESSAGE_INVALID_INDEX);
         }
-        return Index.fromOneBased(Integer.parseInt(trimmedIndex));
     }
 
     /**
