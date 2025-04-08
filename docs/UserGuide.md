@@ -210,10 +210,10 @@ Format: `add n/NAME g/GENDER h/HEIGHT w/WEIGHT no/PHONE e/EMAIL a/ADDRESS d/DIET
 
 10. Phone number must be a positive integer of **exactly** 8 digits and starts with 6, 8 or 9.
 
-11. Email address follows RFC 5322 standards:
+11. Email address has the following standards:
     * The local part (before @) can include letters, numbers, and limited special characters (+, _, ., -), but must not start or end with a special character, and cannot have consecutive periods (..). 
     * The domain (after @) must consist of domain labels separated by periods, where each label starts and ends with a letter or number, and hyphens are allowed inside labels. 
-    * The top-level domain (TLD) must contain only letters, be between 2 and 63 characters long, and be a recognized domain like .com or .org.
+    * The top-level domain (TLD) must be one of the following recognized domains: .com, .org, .net, .edu, .gov, .io, .co, .sg, .my, .info, .biz, .us, .uk, or .ca.
 
 
 12. If you need to enter a / inside a patient's name or other fields (e.g., Charlie A/P),
@@ -257,10 +257,10 @@ Format: `edit INDEX [n/NAME] [g/GENDER] [h/HEIGHT] [w/WEIGHT] [no/PHONE] [e/EMAI
 
 5. The fields used in the `edit` command follow the same constraints as specified in the `add` command.
 
-6. Email address follows RFC 5322 standards:
+6. Email address has the following standards:
     * The local part (before @) can include letters, numbers, and limited special characters (+, _, ., -), but must not start or end with a special character, and cannot have consecutive periods (..).
     * The domain (after @) must consist of domain labels separated by periods, where each label starts and ends with a letter or number, and hyphens are allowed inside labels.
-    * The top-level domain (TLD) must contain only letters, be between 2 and 63 characters long, and be a recognized domain like .com or .org.
+    * The top-level domain (TLD) must be one of the following recognized domains: .com, .org, .net, .edu, .gov, .io, .co, .sg, .my, .info, .biz, .us, .uk, or .ca.
 
 
 7. If you need to enter a / inside a patient's name or other fields (e.g., Charlie A/P),
