@@ -22,8 +22,8 @@ public class Email {
             + "   Each domain label must:\n"
             + "   - start and end with an alphanumeric character,\n"
             + "   - contain only alphanumeric characters or hyphens in between.\n"
-            + "   The domain must end with a valid top-level domain (TLD), such as '.com', which must be "
-            + "between 2 and 63 letters.";
+            + " The domain must end with a top-level domain (TLD) from the accepted list (e.g., '.com', '.org', '.sg')."
+            + " See full list in User Guide.";
 
 
     private static final String ALPHANUMERIC_NO_UNDERSCORE = "[^\\W_]+";
