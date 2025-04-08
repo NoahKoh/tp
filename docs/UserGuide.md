@@ -224,8 +224,8 @@ Format: `add n/NAME g/GENDER h/HEIGHT w/WEIGHT no/PHONE e/EMAIL a/ADDRESS d/DIET
 </box>
 
 Examples:
-* `add n/John Doe g/m h/1.78 w/70.00 no/98765432 e/johnd@example.com a/John Street block 123, #01-01 d/low sodium pr/LOW m/2025-01-25`
-* `add n/Betsy Crowe e/betsycrowe@example.com g/f a/Newgate Prison h/1.68 w/50.00 no/97867564 d/low fat pr/MEDIUM m/2025-02-24 al/peanuts al/milk`
+* `add n/John Doe g/m h/1.78 w/70.00 no/98765432 e/johnd@example.com a/John Street block 123, #01-01 d/low sodium pr/LOW m/2025-01-25` adds a new patient John Doe.
+* `add n/Betsy Crowe e/betsycrowe@example.com g/f a/Newgate Prison h/1.68 w/50.00 no/97867564 d/low fat pr/MEDIUM m/2025-02-24 al/peanuts al/milk` adds a new patient Betsy Crowe.
 
 ---
 
@@ -271,8 +271,8 @@ Format: `edit INDEX [n/NAME] [g/GENDER] [h/HEIGHT] [w/WEIGHT] [no/PHONE] [e/EMAI
 </box>
 
 Examples:
-*  `edit 1 no/91234567 e/johndoe@example.com` Edits the phone number and email address of the 1st patient (in the list) to be `91234567` and `johndoe@example.com` respectively.
-*  `edit 2 n/Betsy Crower al/` Edits the name of the 2nd patient (in the list) to be `Betsy Crower` and clears all existing allergies.
+*  `edit 1 no/91234567 e/johndoe@example.com` edits the phone number and email address of the 1st patient (in the list) to be `91234567` and `johndoe@example.com` respectively.
+*  `edit 2 n/Betsy Crower al/` edits the name of the 2nd patient (in the list) to be `Betsy Crower` and clears all existing allergies.
 
 <box type="warning" seamless>
 
@@ -386,10 +386,7 @@ Format: `filter pr/PRIORITY` or `filter d/DIET` or `filter g/GENDER` or `filter 
 <box type="tip" seamless>
 
 **To note:**
-1. Only one field to filter to be provided at one time. 
-
-Example:
-* `filter pr/high g/f` will not work and will give a error message.
+1. Only one field to filter to be provided at one time.
 
 2. The fields used in the `filter` command follows the same constraints as specified in the `add` command.
 
@@ -403,6 +400,12 @@ Examples:
 * `filter d/low sugar` returns all patients with low sugar diet.
 * `filter g/f` returns all female patients.
 * `filter m/2025-12-12` returns all patients with meeting date on `2025-12-12`.
+
+<box type="warning" seamless>
+
+**Warning:**
+Filter command currently doesn't support multiple fields filtering. `filter pr/high g/f` will not work and will give error message.
+</box>
 
 ---
 
