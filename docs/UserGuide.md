@@ -215,12 +215,10 @@ Format: `add n/NAME g/GENDER h/HEIGHT w/WEIGHT no/PHONE e/EMAIL a/ADDRESS d/DIET
     * The domain (after @) must consist of domain labels separated by periods, where each label starts and ends with a letter or number, and hyphens are allowed inside labels. 
     * The top-level domain (TLD) must contain only letters, be between 2 and 63 characters long, and be a recognized domain like .com or .org.
 
-
+    <br>
 12. If you need to enter a / inside a patient's name or other fields (e.g., Charlie A/P),
     make sure that any part before or after the / is capitalised (e.g., A/P) to avoid confusion with command field prefixes like a/ for address.
-    * Example
-      * Correct: Charlie A/P 
-      * Avoid: Charlie a/p (might be treated as address input)
+    <br> e.g. Charlie A/P instead of Charlie a/p (might be treated as address input)
 </box>
 
 Examples:
@@ -262,12 +260,11 @@ Format: `edit INDEX [n/NAME] [g/GENDER] [h/HEIGHT] [w/WEIGHT] [no/PHONE] [e/EMAI
     * The domain (after @) must consist of domain labels separated by periods, where each label starts and ends with a letter or number, and hyphens are allowed inside labels.
     * The top-level domain (TLD) must contain only letters, be between 2 and 63 characters long, and be a recognized domain like .com or .org.
 
-
+    <br>
 7. If you need to enter a / inside a patient's name or other fields (e.g., Charlie A/P),
     make sure that any part before or after the / is capitalised (e.g., A/P) to avoid confusion with command field prefixes like a/ for address.
-    * Example
-        * Correct: Charlie A/P
-        * Avoid: Charlie a/p (might be treated as address input)
+   <br> e.g. Charlie A/P instead of Charlie a/p (might be treated as address input) 
+
 </box>
 
 Examples:
