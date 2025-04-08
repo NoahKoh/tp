@@ -215,12 +215,10 @@ Format: `add n/NAME g/GENDER h/HEIGHT w/WEIGHT no/PHONE e/EMAIL a/ADDRESS d/DIET
     * The domain (after @) must consist of domain labels separated by periods, where each label starts and ends with a letter or number, and hyphens are allowed inside labels. 
     * The top-level domain (TLD) must be one of the following recognized domains: .com, .org, .net, .edu, .gov, .io, .co, .sg, .my, .info, .biz, .us, .uk, or .ca.
 
-
+    <br>
 12. If you need to enter a / inside a patient's name or other fields (e.g., Charlie A/P),
     make sure that any part before or after the / is capitalised (e.g., A/P) to avoid confusion with command field prefixes like a/ for address.
-    * Example
-      * Correct: Charlie A/P 
-      * Avoid: Charlie a/p (might be treated as address input)
+    <br> e.g. Charlie A/P instead of Charlie a/p (might be treated as address input)
 </box>
 
 Examples:
@@ -262,12 +260,11 @@ Format: `edit INDEX [n/NAME] [g/GENDER] [h/HEIGHT] [w/WEIGHT] [no/PHONE] [e/EMAI
     * The domain (after @) must consist of domain labels separated by periods, where each label starts and ends with a letter or number, and hyphens are allowed inside labels.
     * The top-level domain (TLD) must be one of the following recognized domains: .com, .org, .net, .edu, .gov, .io, .co, .sg, .my, .info, .biz, .us, .uk, or .ca.
 
-
+    <br>
 7. If you need to enter a / inside a patient's name or other fields (e.g., Charlie A/P),
     make sure that any part before or after the / is capitalised (e.g., A/P) to avoid confusion with command field prefixes like a/ for address.
-    * Example
-        * Correct: Charlie A/P
-        * Avoid: Charlie a/p (might be treated as address input)
+   <br> e.g. Charlie A/P instead of Charlie a/p (might be treated as address input) 
+
 </box>
 
 Examples:
@@ -286,7 +283,7 @@ When editing allergies, the existing allergies will be replaced by the new ones 
 
 Changes a patient's priority by their index.
 
-Format: `priority INDEX pr/PRIORITY` / `pr INDEX pr/PRIORITY`
+Format: `priority INDEX pr/PRIORITY` or `pr INDEX pr/PRIORITY`
 
 <box type="tip" seamless>
 
@@ -662,10 +659,10 @@ Furthermore, certain edits can cause the VitaBook to behave in unexpected ways (
 | **Add**                       | `add n/NAME g/GENDER h/HEIGHT w/WEIGHT no/PHONE e/EMAIL a/ADDRESS d/DIET pr/PRIORITY m/MEETING_DATE [al/ALLERGY]…`<br>e.g., `add n/Alex Yeoh g/M h/1.75 w/70.00 no/87438807 e/alex@example.com a/Blk 30 d/low sodium pr/LOW m/2025-12-12 al/peanuts` |
 | **List**                      | `list`                                                                                                                                                                                                                                               |
 | **Edit**                      | `edit INDEX [n/NAME] [g/GENDER] [h/HEIGHT] [w/WEIGHT] [no/PHONE] [e/EMAIL] [a/ADDRESS] [d/DIET] [pr/PRIORITY] [m/MEETING_DATE] [al/ALLERGY]…`<br>e.g., `edit 1 d/low sugar w/68.00 pr/MEDIUM`                                                        |
-| **Priority**                  | `priority INDEX pr/PRIORITY`<br>e.g., `priority 2 pr/HIGH`                                                                                                                                                                                           |
-| **Remark**                    | `remark INDEX r/REMARK`<br>e.g., `remark 1 r/Likes protein-rich foods`                                                                                                                                                                               |
+| **Priority**                  | `priority INDEX pr/PRIORITY` or `pr INDEX pr/PRIORITY` <br>e.g., `priority 2 pr/HIGH`                                                                                                                                                                |
+| **Remark**                    | `remark INDEX r/[REMARK]`<br>e.g., `remark 1 r/Likes protein-rich foods`                                                                                                                                                                             |
 | **Find**                      | `find KEYWORD [MORE_KEYWORDS]`<br>e.g., `find alex bernice`                                                                                                                                                                                          |
-| **Filter**                    | `filter pr/PRIORITY` or `filter d/DIET`  or `filter g/GENDER` or `filter m/MEETING DATE` <br>e.g., `filter d/low sodium`                                                                                                                             |
+| **Filter**                    | `filter pr/PRIORITY` or `filter d/DIET`  or `filter g/GENDER` or `filter m/MEETING_DATE` <br>e.g., `filter d/low sodium`                                                                                                                             |
 | **Sort**                      | `sort CRITERIA `<br>e.g., `sort priority`                                                                                                                                                                                                            |
 | **Delete**                    | `delete INDEX` or `delete EMAIL`<br>e.g., `delete 3` or `delete johnd@gmail.com`                                                                                                                                                                     |
 | **Clear**                     | `clear`                                                                                                                                                                                                                                              |

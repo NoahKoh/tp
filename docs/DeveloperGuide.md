@@ -1163,11 +1163,11 @@ Given below are instructions to test the app manually.
 ---
 
 ### **Undo/Redo Testing**
-| Test Case | Steps | Expected Outcome |
-|-----------|-------|------------------|
-| Basic undo/redo | 1. `add` → 2. `undo` → 3. `redo` | 2. Reverts add → 3. Restores add |
-| Undo at initial state | `undo` with no history | Error: `"No previous state to undo"` |
-| State purge | 1. `add` → 2. `undo` → 3. `add` → 4. `redo` | 4. Error: `"No next state to redo"` |
+| Test Case | Steps | Expected Outcome                                                |
+|-----------|-------|-----------------------------------------------------------------|
+| Basic undo/redo | 1. `add` → 2. `undo` → 3. `redo` | 2. Reverts add → 3. Restores add                                |
+| Undo at initial state | `undo` with no history | Error: `"No previous state to undo. Already at initial state."` |
+| State purge | 1. `add` → 2. `undo` → 3. `add` → 4. `redo` | 4. Error: `"No next state to redo. Already at final state."`                           |
 
 ---
 
@@ -1188,7 +1188,7 @@ Given below are instructions to test the app manually.
 3. **Localization**:
     - Non-English names (e.g., `add n/李华`), note that they are not supported.
 
-**Critical**: Always back up `data/patients.json` before testing destructive commands (`clear`, `delete`).
+**Critical**: Always back up `data/vitabook.json` before testing destructive commands (`clear`, `delete`).
 
 --------------------------------------------------------------------------------------------------------------------
 
